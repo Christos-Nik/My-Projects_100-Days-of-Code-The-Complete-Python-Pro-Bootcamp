@@ -43,12 +43,12 @@ while not game_over: #checks whether the game has finished and runs the loop.
         lives -= 1
         print("Wrong guess. You lose a life.")
         
-        if lives == 0:
+        if lives == 0: #checks the lives value and if its equal to 0, changes game_over variable in order to stop the loop
             game_over = True
             print("You lose.")
 
-    if "_" not in display:
+    if "_" not in display: #checks if there are no more blanks left and changes game_over variable to end the loop and print the outcome
         game_over = True
         print("You win!")
     
-    print(stages[lives])
+    print(stages[lives]) #prints the art of the game according to lives of the player.
