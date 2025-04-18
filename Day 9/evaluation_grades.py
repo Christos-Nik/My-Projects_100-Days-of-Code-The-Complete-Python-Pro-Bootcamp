@@ -5,7 +5,7 @@ student_scores = {
     'Draco': 75,
     'Neville': 60
 }
-student_grades = {}
+student_grades = {} #creates an empy dictionary to store grades based on students' scores
 
 for student in student_scores:
     score = student_scores[student]
