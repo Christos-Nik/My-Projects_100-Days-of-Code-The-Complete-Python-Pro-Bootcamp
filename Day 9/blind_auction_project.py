@@ -1,4 +1,5 @@
 def find_highest_bidder(bidding_dictionary):
+    """This function compares the bid amount of each bidder and picks the winner"""
     highest_bid = 0
     winner = ""
     for bidder in bidding_dictionary:
