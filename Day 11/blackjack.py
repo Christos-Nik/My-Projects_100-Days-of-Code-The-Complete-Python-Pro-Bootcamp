@@ -74,5 +74,5 @@ def blackjack_game():
 
 
 while input("Do you want to play a game of blackjack? Type 'y' for yes or 'n' for no.").lower() == "y":
-    print("\n" * 20)
+    print("\n" * 20) #clears the line to initiate a new game
     blackjack_game()
