@@ -41,7 +41,7 @@ while should_operate is True: #keeps the machine running until should_operate be
         print(f"Water: {resources['water']} ml.")
         print(f"Milk: {resources['milk']} ml.")
         print(f"Coffee: {resources['coffee']} g.")
-        print(f"Total profit: ${profit}")
+        print(f"Total profit: ${round(profit, 2)}")
     elif user_input in MENU: #checks if input is a valid option and stores drink's data in user_choice
         user_choice = MENU[user_input]
         ingredients = user_choice["ingredients"]
