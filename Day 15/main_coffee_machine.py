@@ -31,6 +31,7 @@ resources = {
 }
 #MENU stores drink recipes
 #resources stores amount of resources available on the machine
+profit = 0
 should_operate = True
 while should_operate is True: #keeps the machine running until should_operate becomes False
     user_input = input("What would you like? (espresso/latte/cappuccino):\n").lower() #asks the user for a drink choice
@@ -40,6 +41,7 @@ while should_operate is True: #keeps the machine running until should_operate be
         print(f"Water: {resources['water']} ml.")
         print(f"Milk: {resources['milk']} ml.")
         print(f"Coffee: {resources['coffee']} g.")
+        print(f"Total profit: ${profit}")
     elif user_input in MENU: #checks if input is a valid option and stores drink's data in user_choice
         user_choice = MENU[user_input]
         ingredients = user_choice["ingredients"]
@@ -63,8 +65,10 @@ while should_operate is True: #keeps the machine running until should_operate be
                 change = round(total_paid - cost, 2)
                 if change > 0:
                     print(f"Here is your change: ${change}")
-                
+                    
+                paid_amount = total_paid - change
                 print(f"Here is your {user_input}. Enjoy!")
+                profit += paid_amount
                 for ingredient, amount in ingredients.items():
                     resources[ingredient] -= amount
             else:
