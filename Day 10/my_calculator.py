@@ -45,7 +45,7 @@ def calculator():
         continue_calc = input("Do you want to continue? Type 'yes' to continue or 'no' to start over.").lower()
         if continue_calc == "yes":
             new_calc = True
-            n1 = calculation
+            n1 = calculation #assigns to variable 'n1' the value of the previous calculation(s)
             n2 = n2 = float(input("Please type the second number: \n"))
             operator = input("Please type what operator you would like to use. Valid options are +, -, *, /:\n")
             print(calculation)
