@@ -5,7 +5,7 @@ from hangman_art import stages, logo
 from hangman_words import word_list
 
 chosen_word = random.choice(word_list) #from the imported list picks a random word.
-print(chosen_word)
+print(chosen_word) #for debug purposes, to be removed from final version
 
 print(logo)
 lives = 6

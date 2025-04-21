@@ -8,7 +8,7 @@ student_scores = {
 student_grades = {} #creates an empy dictionary to store grades based on students' scores
 
 for student in student_scores:
-    score = student_scores[student]
+    score = student_scores[student] #checks 'key' values
     if score >= 91:
         grade = "Outstanding"
     elif score >= 81:

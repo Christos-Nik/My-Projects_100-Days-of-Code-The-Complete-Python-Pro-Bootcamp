@@ -13,18 +13,18 @@ def find_highest_bidder(bidding_dictionary):
 from art import logo
 print(logo)
 
-bid_list = {}
+bid_list = {} #makes an empty dictionary of the bidders' list
 
 continue_bid = True
-while continue_bid:
+while continue_bid: #as long as statement is true, runs the while loop
     name = input("Please enter your name:\n")
     bid = int(input("What is your bid:\n$"))
 
-    bid_list[name] = bid
+    bid_list[name] = bid #appends to each bidder in dictionary their bid amount
     check = input("Are there are more bidders? Type 'yes' or 'no':\n").lower()
 
-    if check == "no":
-        continue_bid = False
+    if check == "no": #ends the while loop and finds the highest bidder
+        continue_bid = False 
         find_highest_bidder(bid_list)
     elif check == "yes":
         print("\n" * 2)  # clears the output so bidders don't "cheat"
