@@ -69,7 +69,7 @@ while should_operate is True: #keeps the machine running until should_operate be
                 paid_amount = total_paid - change
                 print(f"Here is your {user_input}. Enjoy!")
                 profit += paid_amount
-                for ingredient, amount in ingredients.items():
+                for ingredient, amount in ingredients.items(): #deducts from resource list ingredient amounts used for producing the coffee
                     resources[ingredient] -= amount
             else:
                 print("Not enough money. Money refunded.") #refunds money to the client if they are not enough and restarts
