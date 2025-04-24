@@ -13,12 +13,24 @@ tim.color("blue")
 # tim.lt(90)
 # tim.fd(100)
 
-# Challgenge 2: Dashed line
+# Challenge 2: Dashed line
 # for _ in range(15):
 #     tim.fd(10)
 #     tim.up()
 #     tim.fd(10)
 #     tim.down()
+
+# Challenge 3: Draw shapes (triangle, square, pentagon, hexagon, heptagon, octagon, nonagon, decagon)
+
+# def draw_shape(num_sides):
+#     angle = 360 / num_sides
+#     for _ in range(num_sides):
+#         tim.forward(100)
+#         tim.rt(angle)
+
+# for shape_side_n in range(3,11):
+#     draw_shape(shape_side_n)
+
 
 
 
