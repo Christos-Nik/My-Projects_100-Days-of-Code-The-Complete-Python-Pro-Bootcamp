@@ -1,11 +1,19 @@
 from turtle import *
 import random
 
-colors = ["aquamarine", "beige", "black", "BlueViolet", "brown", "CadetBlue", "cyan", "DeepPink"]
-directions = [0, 90, 180, 270]
+# colors = ["aquamarine", "beige", "black", "BlueViolet", "brown", "CadetBlue", "cyan", "DeepPink"]
+# directions = [0, 90, 180, 270]
 tim = Turtle()
+colormode(255)
 tim.shape("turtle")
 tim.pensize(20)
+
+def random_color():
+    r = random.randint(0, 255)    
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
+    random_color = (r, g, b)
+    return random_color
 
 # Challenge 1: Draw a square (100 x 100)
 # tim.fd(100)
@@ -37,7 +45,7 @@ tim.pensize(20)
 tim.speed("fastest")
 # Challenge 4: Random walk
 for _ in range(200):
-    tim.color(random.choice(colors))
+    tim.color(random_color())
     tim.forward(30)
     tim.setheading(random.choice(directions))
 
