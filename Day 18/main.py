@@ -13,6 +13,12 @@ tim.color("blue")
 # tim.lt(90)
 # tim.fd(100)
 
+# Challgenge 2: Dashed line
+# for _ in range(15):
+#     tim.fd(10)
+#     tim.up()
+#     tim.fd(10)
+#     tim.down()
 
 
 
