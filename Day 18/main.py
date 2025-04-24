@@ -1,8 +1,11 @@
-from turtle import Turtle, Screen
+from turtle import *
+import random
 
+colors = ["aquamarine", "beige", "black", "BlueViolet", "brown", "CadetBlue", "cyan", "DeepPink"]
+directions = [0, 90, 180, 270]
 tim = Turtle()
 tim.shape("turtle")
-tim.color("blue")
+tim.pensize(20)
 
 # Challenge 1: Draw a square (100 x 100)
 # tim.fd(100)
@@ -31,6 +34,12 @@ tim.color("blue")
 # for shape_side_n in range(3,11):
 #     draw_shape(shape_side_n)
 
+tim.speed("fastest")
+# Challenge 4: Random walk
+for _ in range(200):
+    tim.color(random.choice(colors))
+    tim.forward(30)
+    tim.setheading(random.choice(directions))
 
 
 
