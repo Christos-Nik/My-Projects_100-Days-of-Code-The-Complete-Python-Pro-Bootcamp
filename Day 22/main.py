@@ -8,13 +8,13 @@ screen = Screen()
 screen.bgcolor("black")
 screen.setup(width=800, height=600)
 screen.title("Pong")
-screen.tracer(0)
+screen.tracer(0) #tracer(0) turns off animation updates for manual control.
 
 r_paddle = Paddle((350, 0))
 l_paddle = Paddle((-350, 0))
 ball = Ball()
 scoreboard = Scoreboard()
-
+#setup keyboard control 
 screen.listen()
 screen.onkey(r_paddle.go_up, "Up")
 screen.onkey(r_paddle.go_down, "Down")
@@ -34,12 +34,12 @@ while game_is_on:
     if ball.distance(r_paddle) < 50 and ball.xcor() > 320 or ball.distance(l_paddle) < 50 and ball.xcor() < -320:
         ball.bounce_x()
 
-    #Detect R paddle misses
+    #Detect R paddle misses, if ball passes R paddle resets the ball and adds points to L player
     if ball.xcor() > 380:
         ball.reset_position()
         scoreboard.l_point()
 
-    #Detect L paddle misses:
+    #Detect L paddle misses, if ball passes L paddle resets the ball and adds points to R player
     if ball.xcor() < -380:
         ball.reset_position()
         scoreboard.r_point()
